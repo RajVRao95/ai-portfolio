@@ -1,0 +1,50 @@
+{
+  "name": "ai-portfolio",
+  "version": "1.0.0",
+  "description": "A modern portfolio website for showcasing AI projects and Flowise agents",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python3 -m http.server 8000",
+    "deploy:netlify": "netlify deploy --prod --dir .",
+    "deploy:vercel": "vercel --prod",
+    "validate": "html-validate index.html && stylelint styles.css",
+    "optimize": "echo 'Optimizing assets...' && npx imagemin-cli images/* --out-dir=images/optimized",
+    "lighthouse": "lighthouse http://localhost:8000 --output html --output-path ./lighthouse-report.html"
+  },
+  "keywords": [
+    "ai",
+    "portfolio",
+    "flowise",
+    "machine-learning",
+    "artificial-intelligence",
+    "website",
+    "responsive",
+    "modern"
+  ],
+  "author": "Raj Kumar Vishwasrao",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-portfolio.git"
+  },
+  "homepage": "https://yourusername.github.io/ai-portfolio/",
+  "devDependencies": {
+    "html-validate": "^7.0.0",
+    "stylelint": "^15.0.0",
+    "stylelint-config-standard": "^33.0.0",
+    "lighthouse": "^10.0.0",
+    "imagemin-cli": "^7.0.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "> 1%",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
